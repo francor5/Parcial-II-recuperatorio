@@ -1,0 +1,34 @@
+package recuperatoriolabII;
+
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int cont=0;
+   try {
+       System.out.print("bienvenido");
+       System.out.print("de que numero desea ingresar el factorial?");
+       int a =sc.nextInt();
+       while (cont==0){
+           Factorial n2= new Factorial(a);
+           for (int u=a;a==1;a--){
+               System.out.print(a+"x");
+           }
+           n2.CalcularelFactorial();
+           System.out.print("SI DESEA CALCULAR EL FACTORIAL DE OTRO NUMERO");
+           System.out.print("presione 1");
+           cont=sc.nextInt();
+           if (cont!=1){
+               cont=100;
+           }
+
+       }
+       System.out.print("gracias por usar el programa");
+   }catch (Exception e){
+       System.out.print("solo se admiten enteros");
+   }
+
+
+    }
+}
